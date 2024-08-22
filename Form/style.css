@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    outline: 0;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(51, 50, 50);
+   
+   
+}
+
+form{
+    background-color: rgb(11, 9, 10);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    width: 100%;
+    max-width: 468px;
+    margin: 50px auto;
+    padding: 2rem 1.5rem;
+}
+
+
+form h1{
+
+    text-align: center;
+    color: rgb(236, 225, 225);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+
+    font-size: 1.4rem;
+}
+form input{
+    height: 40px;
+    padding: 1rem 1.5rem;
+    font-weight: bolder;
+}
+form button{
+    height: 40px;
+    background-color: rgb(114, 238, 47);
+    color: rgb(254, 251, 252);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: all 3s;
+}
+form button:hover{
+    background-color: blanchedalmond;
+    color: black;
+}
+form p{
+    font-weight: bolder;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+}
+
+.output {
+    background-color: rgb(15, 16, 15);
+    flex-direction: column;
+    gap: 2rem 0;
+    width: 100%; 
+    max-width: 1068px;
+    margin: 50px auto;
+    padding: 2rem 1.5rem;
+    transition: transform 3s; 
+    display: flex; 
+    transform: translateX(-200%); 
+    position: relative;
+    padding: 1.5rem;
+}
+
+.show.output {
+    transform: translateX(0);
+}
+
+.output h2{
+
+    font-size: 3.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: dimgray;
+    font-weight: bolder;
+}
+.output p{
+    font-size: 2.1rem;
+    color: white;
+    font-weight: bolder;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+hr{ 
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    height: 5px;
+    width: 20%;
+}

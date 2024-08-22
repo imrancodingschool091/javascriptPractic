@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(176, 171, 171);
+}
+
+.container {
+    width: 100%;
+}
+
+.todoApp {
+    padding: 1rem 2.8rem;
+    width: 100%;
+    max-width: 390px;
+    background-color: rgb(253, 246, 246);
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    height: 65vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 1rem 0;
+}
+
+.heading h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: rgb(56, 55, 55);
+    margin-right: .7rem;
+}
+
+.heading img {
+    width: 40px;
+}
+
+.addItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.addItem input {
+    flex-grow: 1;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    padding: 0 1.2rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: darkgray;
+    border-radius: 4px 0 0 4px;
+    background-color: #fff;
+}
+
+.addItem input::placeholder {
+    color: lightgray;
+}
+
+.addItem button {
+    flex-basis: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: rgb(32, 220, 42);
+    height: 40px;
+    border: 0;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.addItem button:hover {
+    background-color: crimson;
+}
+
+.listItems {
+    display: flex;
+    margin: 1rem 0;
+    gap: 1rem 0;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.listItems li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(65, 63, 63);
+    padding: .4rem .4rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.listItems li:hover {
+    background-color: rgb(184, 169, 169);
+}
+
+.listItems li::before {
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    transform: translateY(-50%);
+    content: "";
+    background-image: url('unchecked.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.listItems li.checked::before {
+    background-image: url('checked.png');
+}
+
+.listItems li.checked p {
+    text-decoration: line-through;
+    color: rgb(63, 176, 25);
+    
+
+}
+
+.listItems li span {
+    cursor: pointer;
+}
+
+.listItems li p {
+    font-family: cursive;
+}
+
+

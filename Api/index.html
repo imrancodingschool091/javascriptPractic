@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fetch API Example</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Fetch API</h1>
+            <div id="image-container"></div> <!-- Container for images -->
+        </div>
+
+        <script>
+        const url = "https://fakestoreapiserver.reactbd.com/photos";
+
+        async function getResult() {
+            try {
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                const data = await response.json();
+                console.log(data);
+
+                const imageContainer = document.getElementById("image-container");
+
+                
+                data.forEach(item => {
+                    let img = document.createElement("img");
+                    console.log(item)
+                    
+                    
+                    img.src = item.url;
+                    img.alt = "Image from API";
+                    imageContainer.appendChild(img);
+                });
+
+            } catch (error) {
+                console.error("Fetch error:", error);
+            }
+        }
+
+        getResult();
+    </script>
+
+    </body>
+</html>
